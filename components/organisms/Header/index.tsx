@@ -23,7 +23,7 @@ const LanguageList = dynamic(() =>
 const ButtonSign = dynamic(() =>
     import('../../molecules/Header/Button/ButtonSign')
 )
-const Header = ({ menu,headerLogo,...props}:HeaderProps):JSX.Element => {
+const Header = ({ header: {menu = [],headerLogo = '/images/atoms/Logo/LogoLight.svg'},...props}:HeaderProps):JSX.Element => {
    const [showMenu,toggleMenu] = useState(false)
    return(
        <header className={styles.header}>

@@ -7,10 +7,9 @@ const ButtonWithList = dynamic(() =>
 )
 const LanguageList = ():JSX.Element =>{
     // Toggle language container
-    const [showLangList,toggleLangList] = useState(false)
     const { locales = [], locale = 'ru'} = useRouter()
     return (
-        <ButtonWithList className="langSwitcher" onClick={() => toggleLangList(!showLangList)} text={locale} showContainer={showLangList} >
+        <ButtonWithList className="langSwitcher" text={locale} >
             {
                 locales.length ? locales.map((lang,index) => (
                     <li key={index} className="langSwitcher__item">
