@@ -1,0 +1,15 @@
+.headerMenu
+  @apply block
+  &__item
+    a
+      display: block
+      padding-bottom: 1rem
+      font-weight: 600
+      text-transform: uppercase
+@screen lg
+  .headerMenu
+    @apply flex justify-between items-center
+    &__item
+      padding-right: 40px
+      a
+        padding-bottom: 0
