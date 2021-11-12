@@ -6,4 +6,5 @@ module.exports = withPlugins([
 ],{
   reactStrictMode: true,
   compress: true,
+  swcMinify: true,
 });
