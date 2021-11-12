@@ -12,6 +12,7 @@ const Logo = ({headerLogo = '',className = '',...props}:LogoProps):JSX.Element =
                       height={37}
                       src={headerLogo}
                       alt="Logo"
+                      quality="60"
                       layout="responsive"
                   />: 'Logo'}
               </a>

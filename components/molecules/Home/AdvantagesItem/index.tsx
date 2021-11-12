@@ -17,6 +17,7 @@ const AdvantagesItem = ({img = '/images/organisms/Home/Advantages/search.svg',ti
                         height={68}
                         src={img}
                         alt="icon"
+                        quality="60"
                     />
                 </div>: null
             }

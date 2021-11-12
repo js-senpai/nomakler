@@ -35,6 +35,7 @@ const ApartmentItem = ({
                         height={232}
                         src={img}
                         alt={title}
+                        quality="50"
                         layout="responsive"
                     />: null
                 }
