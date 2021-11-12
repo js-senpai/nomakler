@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const withPlugins = require('next-compose-plugins');
-const optimizedImages = require('next-optimized-images');
+// const optimizedImages = require('next-optimized-images');
 const nextTranslate = require('next-translate')
 module.exports = withPlugins([
   // [optimizedImages, {
