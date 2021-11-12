@@ -1,0 +1,13 @@
+.advantages
+  margin-top: 30px
+  &__container
+    @apply  grid gap-2
+    grid-template-columns: 1fr
+    grid-gap: 30px
+@screen lg
+  .advantages
+    margin-top: -125px
+    &__container
+      @apply px-60 grid gap-2
+      grid-template-columns: repeat(3,1fr)
+      grid-gap: 30px
