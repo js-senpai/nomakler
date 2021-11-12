@@ -1,0 +1,45 @@
+.apartmentItem
+  padding: 0 !important
+  &__img
+    background-color: var(--grey)
+    img
+      max-height: 232px
+      object-fit: cover
+      object-position: center
+  &__content
+    padding: 20px 30px 35px 20px
+  &__title
+    font-weight: 600
+    font-size: 18px
+    line-height: 22px
+    text-align: center
+    color: #000000
+    margin-bottom: 16px
+  &__infoList
+    @apply grid justify-between items-center gap-2
+    list-style-type: none
+    grid-template-columns: repeat(3,auto)
+    margin-bottom: 20px
+    &__item
+      @apply grid items-center
+      grid-template-columns: 28px 1fr
+      color: var(--grey)
+  &__address
+    color: var(--grey)
+    text-align: center
+    margin-bottom: 23px
+  &__footer
+    @apply grid justify-center items-center
+    grid-template-columns: 2fr 1fr
+    grid-gap: 15px
+  &__price
+    @apply flex flex-wrap
+    &__number
+      color: var(--blue)
+      font-weight: 600
+      font-size: 24px
+      padding-right: 1px
+    &__text
+      line-height: 25px
+
+

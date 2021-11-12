@@ -5,5 +5,6 @@ module.exports = {
   locales: ["en", "ru"],
   pages: {
     '*': ['common','button'],
+    '/': ['home','apartment'],
   },
 }

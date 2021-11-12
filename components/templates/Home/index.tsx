@@ -7,11 +7,19 @@ const Banner = dynamic(() =>
 const Advantages = dynamic(() =>
     import('../../organisms/Home/Advantages')
 )
-const Home = ({homeBanner: {img = '/images/organisms/Home/Banner/banner.jpg',title = '',description = ''},advantages = [],...props}:HomeProps):JSX.Element => {
+const ActualApartments = dynamic(() =>
+    import('../../organisms/Home/ActualApartments')
+)
+const Home = ({
+                  homeBanner,
+                  advantages = [],
+                  apartments = [],
+                  ...props}:HomeProps):JSX.Element => {
     return (
       <>
-        <Banner {...props} img={img} title={title} description={description} />
+        <Banner {...props} img={homeBanner.img} title={homeBanner.title} description={homeBanner.description} />
         <Advantages {...props} advantages={advantages} />
+        <ActualApartments apartments={apartments} />
       </>
     )
 }
