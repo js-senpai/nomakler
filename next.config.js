@@ -2,6 +2,7 @@
 const withPlugins = require('next-compose-plugins');
 const nextTranslate = require('next-translate')
 const DuplicatePackageCheckerPlugin = require('duplicate-package-checker-webpack-plugin')
+const path = require('path')
 module.exports = withPlugins([
   nextTranslate
 ],{
