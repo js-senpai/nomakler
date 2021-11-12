@@ -2,12 +2,13 @@ import {LogoProps} from "./Logo.props";
 import Image from 'next/image'
 import Link from "next/link";
 import styles from './Logo.module.sass'
-const Logo = ({src = '',className = '',...props}:LogoProps):JSX.Element => {
+const Logo = ({src = '',className = '',priority = false,...props}:LogoProps):JSX.Element => {
   return (
       <div {...props} className={`${styles.logo} ${className}`}>
           <Link href="/" >
               <a>
                   {src.length ?<Image
+                      priority={priority}
                       width={200}
                       height={37}
                       src={src}
