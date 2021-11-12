@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import {useState} from "react";
 import styles from './Header.module.sass'
 import {HeaderProps} from "./Header.props";
-import {faTimes} from "@fortawesome/free-solid-svg-icons";
+import { faTimes} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 // Import components
 const DefaultContainer = dynamic(() =>
@@ -23,22 +23,24 @@ const LanguageList = dynamic(() =>
 const ButtonSign = dynamic(() =>
     import('../../molecules/Header/Button/ButtonSign')
 )
-const Header = ({ header: {menu = [],headerLogo = '/images/atoms/Logo/LogoLight.svg'},...props}:HeaderProps):JSX.Element => {
+const Header = ({ header: {menu = [],src = '/images/atoms/Logo/LogoLight.svg'},...props}:HeaderProps):JSX.Element => {
    const [showMenu,toggleMenu] = useState(false)
    return(
        <header className={styles.header}>
          <DefaultContainer className={styles.header__container}>
              <ButtonBurger active={showMenu} onClick={() => toggleMenu(!showMenu)} />
-             <Logo headerLogo={headerLogo} />
+             <div className={`${styles.header__logo}`}>
+                 <Logo src={src} />
+             </div>
              <div className={`${styles.header__wrapper} ${showMenu ? styles.active: ''}`}>
                  <div className="flex justify-end">
                      <button className={styles.header__buttonClose} onClick={() => toggleMenu(!showMenu)}>
                          <FontAwesomeIcon icon={faTimes} />
                      </button>
                  </div>
-                 <Menu menu={menu} />
-                 <LanguageList />
+                 {menu.length ?<Menu menu={menu} />: null}
              </div>
+             <LanguageList />
              <ButtonSign />
          </DefaultContainer>
        </header>

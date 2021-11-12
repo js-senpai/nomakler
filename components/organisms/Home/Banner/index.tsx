@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 import styles from './Banner.module.sass'
 import {BannerProps} from "./Banner.props";
-import Image from "next/image";
+const Image = dynamic(()=>import('next/image'))
 // Import components
 const DefaultContainer = dynamic(() =>
     import('../../../containers/DefaultContainer')
@@ -14,7 +14,7 @@ const Banner = ({img = '/images/organisms/Home/Banner/banner.jpg',title = '',des
                 alt={title}
                 quality="50"
                 layout="fill"
-                object-fit="cover"
+                objectFit="cover"
                 objectPosition="center"
             />
             <DefaultContainer className="relative">

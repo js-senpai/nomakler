@@ -1,5 +1,4 @@
 import React from "react";
-
 export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement>{
     header: {
         menu: {
@@ -7,7 +6,7 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLDivElement>{
             url: string
             text: string
         }[]
-        headerLogo: string
+        src: string
     }
 
 }

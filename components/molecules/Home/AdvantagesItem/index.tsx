@@ -1,6 +1,6 @@
 // Import components
 import dynamic from "next/dynamic";
-import Image from "next/image";
+const Image = dynamic(()=>import('next/image'))
 import styles from './AdvantagesItem.module.sass'
 import {AdvantagesItemProps} from "./AdvantagesItem.props";
 const BlockContainer = dynamic(() =>

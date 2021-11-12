@@ -1,7 +1,7 @@
 import {useRouter} from "next/router";
 import dynamic from "next/dynamic";
 import {useState} from "react";
-import Link from 'next/link'
+const Link = dynamic(()=>import('next/link'))
 const ButtonWithList = dynamic(() =>
     import('../Button/ButtonWithList')
 )

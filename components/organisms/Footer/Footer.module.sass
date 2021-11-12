@@ -1,0 +1,31 @@
+.footer
+  padding: 60px 0
+  background-color: #000
+  &__container
+    @apply grid justify-between items-center
+    grid-template-columns: 1fr
+    grid-gap: 30px
+    grid-template-rows: auto
+  &__item
+    color: #fff
+  &__logo,&__copyright,&__socials
+    @apply flex justify-center items-center
+  &__logo
+    margin-bottom: 30px
+  &__copyright
+    margin-top: 30px
+
+@screen lg
+  .footer
+    &__container
+      @apply items-start
+      grid-template-columns: 1fr 1fr 2fr
+    &__logo,&__copyright,,&__socials
+      @apply block
+    &__logo
+      margin-bottom: 69px
+    &__copyright
+      margin-top: 64px
+    &__itemLast
+      column-count: 2
+      column-gap: 30px

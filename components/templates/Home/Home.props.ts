@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export interface HomeProps extends React.HTMLAttributes<HTMLDivElement>{
     homeBanner: {
         img: string

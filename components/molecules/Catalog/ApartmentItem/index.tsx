@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import Image from "next/image";
+const Image = dynamic(()=>import('next/image'))
 import {faBed,faShower,faRulerCombined} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 // Import components
