@@ -9,6 +9,9 @@
   .advantages
     margin-top: -125px
     &__container
-      @apply px-60 grid gap-2
+      @apply px-60 grid
+@screen xl
+  .advantages
+    &__container
       grid-template-columns: repeat(3,1fr)
       grid-gap: 30px

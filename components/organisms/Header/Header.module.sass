@@ -2,7 +2,7 @@
   padding: 33px 0
   &__container
     @apply grid gap-2 justify-between relative items-center
-    grid-template-columns: 1fr 3fr 1fr 1fr
+    grid-template-columns: 1fr 12fr 1fr
   &__wrapper
     @apply fixed  bg-white p-2
     left: -100000px
@@ -11,10 +11,14 @@
     z-index: 1
     &.active
       animation: active 500ms ease-in-out alternate forwards
-  &__buttonClose
+  &__btnClose
     @apply block text-2xl
     width: 20px
     color: var(--blue)
+  &__btnAuth
+    min-width: 229px
+    grid-column-start: 1
+    grid-column-end: 4
   &__logo
     @apply flex justify-center items-center
 @screen lg
@@ -24,10 +28,13 @@
       grid-gap: 40px
     &__wrapper
       @apply static p-0 flex justify-between items-center
-    &__buttonClose
+    &__btnClose
       @apply hidden
     &__logo
       @apply block
+    &__btnAuth
+      grid-column-start: auto
+      grid-column-end: auto
 @keyframes active
   from
     left: -100000px

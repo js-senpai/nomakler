@@ -34,14 +34,14 @@ const Header = ({ header: {menu = [],src = '/images/atoms/Logo/LogoLight.svg'},.
              </div>
              <div className={`${styles.header__wrapper} ${showMenu ? styles.active: ''}`}>
                  <div className="flex justify-end">
-                     <button className={styles.header__buttonClose} onClick={() => toggleMenu(!showMenu)}>
+                     <button className={styles.header__btnClose} onClick={() => toggleMenu(!showMenu)}>
                          <FontAwesomeIcon icon={faTimes} />
                      </button>
                  </div>
                  {menu.length ?<Menu menu={menu} />: null}
              </div>
              <LanguageList />
-             <ButtonSign />
+             <ButtonSign className={`${styles.header__btnAuth}`} />
          </DefaultContainer>
        </header>
    )

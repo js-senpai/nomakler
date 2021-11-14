@@ -12,14 +12,14 @@ const LanguageList = ():JSX.Element =>{
         <ButtonWithList className={styles.languageList} text={locale} >
             {
                 locales.length ? locales.map((lang,index) => (
-                    <li key={index} className="langSwitcher__item">
+                    <div key={index} className="langSwitcher__item">
                         <Link
                             href='/'
                             locale={lang}
                         >
                             {lang}
                         </Link>
-                    </li>
+                    </div>
                 )): null
             }
         </ButtonWithList>

@@ -13,6 +13,10 @@
     @apply grid justify-between items-center
     grid-gap: 30px
     grid-template-columns: 1fr
+@screen md
+  .actualApartments
+    &__list
+      grid-template-columns: repeat(2,1fr)
 @screen lg
   .actualApartments
     &__container
