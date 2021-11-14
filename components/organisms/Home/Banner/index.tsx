@@ -12,7 +12,7 @@ const Banner = ({img = '/images/organisms/Home/Banner/banner.jpg',title = '',des
             <Image
                 src={img}
                 alt={title}
-                quality="50"
+                quality="40"
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"
