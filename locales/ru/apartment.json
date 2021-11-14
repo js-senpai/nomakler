@@ -1,3 +1,5 @@
 {
-  "PRICE_CURRENCY": "ЕВРО/МEС"
+  "PRICE_CURRENCY": "ЕВРО/МEС",
+  "READY_RENT": "Готов к аренде",
+  "VERIFIED": "Верифицирован"
 }

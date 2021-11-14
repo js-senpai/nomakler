@@ -1,4 +1,4 @@
-import {forwardRef, Ref, useEffect, useLayoutEffect, useRef, useState} from "react";
+import {forwardRef,  useState} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {ButtonWithListProps} from "./ButtonWithList.props";
 import { faSortDown } from '@fortawesome/free-solid-svg-icons'
@@ -10,7 +10,7 @@ const ButtonWithList = forwardRef<HTMLButtonElement, ButtonWithListProps>(
             <button
                 type="button"
                 ref={ref}
-                className={`${styles.buttonWithList} ${showContainer ? styles.active : ''}`}
+                className={`${styles.buttonWithList} ${showContainer ? styles.active : ''} ${className}`}
                 onClick={() => toggleContainer(!showContainer)}
             >
                 <div className={`${styles.buttonWithList__text}`}>{text}</div>

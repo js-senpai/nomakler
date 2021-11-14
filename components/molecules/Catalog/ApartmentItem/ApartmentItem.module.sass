@@ -2,10 +2,22 @@
   padding: 0 !important
   &__img
     background-color: var(--grey)
+    height: 232px
+    position: relative
     img
-      max-height: 232px
       object-fit: cover
       object-position: center
+      height: 100%
+      width: 100%
+  &__badge
+    position: absolute
+    top: 25px
+  &__badgeVerified
+    background-color: #000
+    right: 25px
+  &__badgeReadyRent
+    background-color: var(--green)
+    left: 25px
   &__content
     padding: 20px 30px 35px 20px
   &__title

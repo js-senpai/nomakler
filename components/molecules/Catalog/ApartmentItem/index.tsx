@@ -12,10 +12,13 @@ const LinkPrimary = dynamic(() =>
 import useTranslation from 'next-translate/useTranslation'
 import {ApartmentsItemProps} from "./ApartmentsItem.props";
 import styles from './ApartmentItem.module.sass'
+const Badge = dynamic(() =>
+    import('../../../atoms/Badge')
+)
 const ApartmentItem = ({
                        img = '/images/molecules/Catalog/Apartment/item-1.jpg',
-                       verified = false,
-                       ready = false,
+                       verified = true,
+                       ready = true,
                        title = '',
                        sleepingPlaces = 0,
                        shower = 0,
@@ -31,13 +34,17 @@ const ApartmentItem = ({
                 {
                     img ?
                     <Image
-                        width={350}
-                        height={232}
                         src={img}
                         alt={title}
                         quality="50"
-                        layout="responsive"
+                        layout="fill"
                     />: null
+                }
+                {
+                    ready ? <Badge className={`${styles.apartmentItem__badge} ${styles.apartmentItem__badgeReadyRent}`}>{t('apartment:READY_RENT')}</Badge>: null
+                }
+                {
+                    verified ? <Badge className={`${styles.apartmentItem__badge} ${styles.apartmentItem__badgeVerified}`}>{t('apartment:VERIFIED')}</Badge>: null
                 }
             </div>
             <div className={styles.apartmentItem__content}>

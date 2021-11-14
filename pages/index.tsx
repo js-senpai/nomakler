@@ -18,7 +18,7 @@ const HomePage: NextPage = ({header,homeBanner,advantages = [],apartments = [],.
       </>
   )
 }
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
     try {
         return {
             props: {

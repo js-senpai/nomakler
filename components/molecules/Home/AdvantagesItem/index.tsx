@@ -7,6 +7,7 @@ const BlockContainer = dynamic(() =>
     import('../../../containers/BlockContainer')
 )
 
+
 const AdvantagesItem = ({img = '/images/organisms/Home/Advantages/search.svg',title = '',description = '',...props}:AdvantagesItemProps):JSX.Element => {
     return (
         <BlockContainer {...props} className={styles.advantagesItem}>

@@ -19,7 +19,11 @@
       @apply px-60
     &__list
       grid-template-columns: repeat(3,1fr)
-@screen 2xl
+@screen xl
+  .actualApartments
+    &__list
+      grid-template-columns: repeat(4,1fr)
+@media (min-width: 1828px)
   .actualApartments
     &__list
       grid-template-columns: repeat(5,1fr)
