@@ -1,0 +1,23 @@
+{
+  "i18n": {
+    "HOME": {
+      "APARTMENTS": {
+        "TITLE": "The <span class='blue-text'>#1</span> Site for Renters",
+        "DESCRIPTION": "Choose from over 1 million apartments, houses, condos, and townhomes for rent."
+      }
+    },
+    "OTHER": {
+      "COPYRIGHT": "Разработано в"
+    },
+    "BUTTON": {
+      "SEND_MESSAGE": "Отправить сообщение",
+      "SIGN": "Регистрация/Вход",
+      "MORE_INFO": "Подробнее"
+    },
+    "APARTMENT": {
+      "PRICE_CURRENCY": "ЕВРО/МEС",
+      "READY_RENT": "Готов к аренде",
+      "VERIFIED": "Верифицирован"
+    }
+  }
+}

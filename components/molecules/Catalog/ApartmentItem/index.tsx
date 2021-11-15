@@ -9,7 +9,7 @@ const BlockContainer = dynamic(() =>
 const LinkPrimary = dynamic(() =>
     import('../../../atoms/Link/LinkPrimary')
 )
-import useTranslation from 'next-translate/useTranslation'
+import { useTranslation } from 'next-export-i18n'
 import {ApartmentsItemProps} from "./ApartmentsItem.props";
 import styles from './ApartmentItem.module.sass'
 const Badge = dynamic(() =>
@@ -41,10 +41,10 @@ const ApartmentItem = ({
                     />: null
                 }
                 {
-                    ready ? <Badge className={`${styles.apartmentItem__badge} ${styles.apartmentItem__badgeReadyRent}`}>{t('apartment:READY_RENT')}</Badge>: null
+                    ready ? <Badge className={`${styles.apartmentItem__badge} ${styles.apartmentItem__badgeReadyRent}`}>{t('APARTMENT.READY_RENT')}</Badge>: null
                 }
                 {
-                    verified ? <Badge className={`${styles.apartmentItem__badge} ${styles.apartmentItem__badgeVerified}`}>{t('apartment:VERIFIED')}</Badge>: null
+                    verified ? <Badge className={`${styles.apartmentItem__badge} ${styles.apartmentItem__badgeVerified}`}>{t('APARTMENT.VERIFIED')}</Badge>: null
                 }
             </div>
             <div className={styles.apartmentItem__content}>
@@ -67,10 +67,10 @@ const ApartmentItem = ({
                 <footer className={styles.apartmentItem__footer}>
                     <div className={styles.apartmentItem__price}>
                         <div className={styles.apartmentItem__price__number}>{price || 0}</div>
-                        <div className={styles.apartmentItem__price__text}>{t('apartment:PRICE_CURRENCY')}</div>
+                        <div className={styles.apartmentItem__price__text}>{t('APARTMENT.PRICE_CURRENCY')}</div>
                     </div>
                     {
-                        slug ? <LinkPrimary url={`/apartment/${slug}`}>{t('button:MORE_INFO')}</LinkPrimary>:null
+                        slug ? <LinkPrimary url={`/apartment/${slug}`}>{t('BUTTON.MORE_INFO')}</LinkPrimary>:null
                     }
                 </footer>
             </div>

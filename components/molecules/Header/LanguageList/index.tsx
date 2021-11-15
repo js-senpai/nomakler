@@ -5,20 +5,20 @@ const Link = dynamic(()=>import('next/link'))
 const ButtonWithList = dynamic(() =>
     import('../Button/ButtonWithList')
 )
+import {LanguageSwitcher, useLanguageQuery} from 'next-export-i18n';
 const LanguageList = ():JSX.Element =>{
     // Toggle language container
-    const { locales = [], locale = 'ru'} = useRouter()
+    const locales = ['ru','en']
     return (
-        <ButtonWithList className={styles.languageList} text={locale} >
+        <ButtonWithList className={styles.languageList} text="ru" >
             {
                 locales.length ? locales.map((lang,index) => (
                     <div key={index} className="langSwitcher__item">
-                        <Link
-                            href='/'
-                            locale={lang}
+                        <LanguageSwitcher
+                            lang={lang}
                         >
                             {lang}
-                        </Link>
+                        </LanguageSwitcher>
                     </div>
                 )): null
             }

@@ -1,7 +1,7 @@
 // Import components
 import dynamic from "next/dynamic";
 import {ActualApartmentsProps} from "./ActualApartments.props";
-import useTranslation from 'next-translate/useTranslation'
+import { useTranslation } from 'next-export-i18n'
 // Import components
 const ApartmentItem  = dynamic(() =>
     import('../../../molecules/Catalog/ApartmentItem')
@@ -18,8 +18,8 @@ const ActualApartments = ({apartments = [],...props}: ActualApartmentsProps):JSX
   return (
       <section className={`${styles.actualApartments}`} {...props}>
           <DefaultContainer className={`${styles.actualApartments__container}`}>
-              <h2 className={styles.actualApartments__title} dangerouslySetInnerHTML={{__html: t('home:APARTMENTS_TITLE')}} />
-              <div className={styles.actualApartments__description}>{t('home:APARTMENTS_DESCRIPTION')}</div>
+              <h2 className={styles.actualApartments__title} dangerouslySetInnerHTML={{__html: t('HOME.APARTMENTS.TITLE')}} />
+              <div className={styles.actualApartments__description}>{t('HOME.APARTMENTS.DESCRIPTION')}</div>
           </DefaultContainer>
           <FullWidthContainer>
               {apartments.length ?
