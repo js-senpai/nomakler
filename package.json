@@ -7,11 +7,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p $PORT",
-    "lint": "next lint",
     "export": "next export",
+    "start": "next start",
+    "lint": "next lint",
     "prestart": "npm run export",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build && npm run export"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
