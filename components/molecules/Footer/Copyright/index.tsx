@@ -2,17 +2,23 @@ import dynamic from "next/dynamic";
 
 const Image = dynamic(()=>import('next/image'))
 import styles from './Copyright.module.sass'
+import useTranslation from 'next-translate/useTranslation'
 const Copyright = ({className = '',...props}):JSX.Element => {
+    const { t } = useTranslation()
     return (
-        <a href="https://michaelstudioo.com/" className={`${styles.copyright}`}>
-            <Image
-                width={263}
-                height={22}
-                src="/images/molecules/Footer/Copyright/img.svg"
-                alt="Michael studio"
-                quality="60"
-                layout="responsive"
-            />
+        <a href="https://michaelstudioo.com/" target="__blank" className={`${styles.copyright}`}>
+            <span>{t('common:COPYRIGHT')}</span>
+            <div  className={styles.copyright__img}>
+                <Image
+                    width={31}
+                    height={22}
+                    src="/images/molecules/Footer/Copyright/logo.png"
+                    alt="Michael studio"
+                    quality="60"
+                    layout="fixed"
+                />
+            </div>
+            <span>Michaelstudioo</span>
         </a>
     )
 }
