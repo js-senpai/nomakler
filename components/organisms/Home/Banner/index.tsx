@@ -12,11 +12,10 @@ const Banner = ({img = '/images/organisms/Home/Banner/banner.jpg',title = '',des
             <Image
                 src={img}
                 alt={title}
-                quality="40"
+                quality="25"
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"
-                priority={true}
             />
             <DefaultContainer className="relative">
                 {title.length?<h1 className={styles.banner__title}>{title}</h1>: null}
