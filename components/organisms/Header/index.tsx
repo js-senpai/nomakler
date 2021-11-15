@@ -30,7 +30,7 @@ const Header = ({ header: {menu = [],src = '/images/atoms/Logo/LogoLight.svg'},.
          <DefaultContainer className={styles.header__container}>
              <ButtonBurger active={showMenu} onClick={() => toggleMenu(!showMenu)} />
              <div className={`${styles.header__logo}`}>
-                 <Logo src={src} priority={true} />
+                 <Logo src={src}  />
              </div>
              <div className={`${styles.header__wrapper} ${showMenu ? styles.active: ''}`}>
                  {/*<div className="flex justify-end">*/}
