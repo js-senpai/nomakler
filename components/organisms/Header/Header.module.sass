@@ -5,12 +5,16 @@
     grid-template-columns: 1fr 12fr 1fr
   &__wrapper
     @apply fixed  bg-white p-2
-    left: -100000px
-    top: 0
-    bottom: 0
+    left: 5%
+    top: 80px
+    bottom: auto
     z-index: 1
+    padding: 30px 30px 10px
+    box-shadow: 0 0 10px 10px rgb(0 0 0 / 20%)
+    display: none
     &.active
       animation: active 500ms ease-in-out alternate forwards
+      display: block
   &__btnClose
     @apply block text-2xl
     width: 20px
@@ -28,6 +32,8 @@
       grid-gap: 47px
     &__wrapper
       @apply static p-0 flex justify-between items-center
+      box-shadow: none
+      padding: 0
     &__btnClose
       @apply hidden
     &__logo
@@ -37,7 +43,6 @@
       grid-column-end: auto
 @keyframes active
   from
-    left: -100000px
+    opacity: 0
   to
-    left: 0
-    right: 0
+    opacity: 1
