@@ -7,8 +7,4 @@ module.exports = withPlugins([
   reactStrictMode: true,
   compress: true,
   swcMinify: true,
-  images: {
-    loader: 'cloudinary',
-    path: 'https://res.cloudinary.com/dsnyd1pso/image/upload/',
-  },
 });
