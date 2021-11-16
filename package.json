@@ -45,6 +45,7 @@
     "postcss": "^8.3.11",
     "sass": "^1.43.4",
     "tailwindcss": "^2.2.19",
-    "typescript": "4.4.4"
+    "typescript": "4.4.4",
+    "webp-loader": "^0.6.0"
   }
 }
