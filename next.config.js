@@ -8,7 +8,7 @@ module.exports = withPlugins([
   compress: true,
   swcMinify: true,
   images: {
-    loader: 'imgix',
+    loader: 'cloudinary',
     path: 'https://res.cloudinary.com/dsnyd1pso/image/upload/',
   },
 });
