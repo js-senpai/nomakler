@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import styles from './Banner.module.sass'
 import {BannerProps} from "./Banner.props";
+import customLoader from "../../../../loaders/customLoader";
 const Image = dynamic(()=>import('next/image'))
 // Import components
 const DefaultContainer = dynamic(() =>
@@ -9,7 +10,7 @@ const DefaultContainer = dynamic(() =>
 const Banner = ({img = '/images/organisms/Home/Banner/banner.jpg',title = '',description = '',...props}:BannerProps):JSX.Element => {
     return(
         <section  className={styles.banner}>
-            <Image
+            <Image loader={customLoader}
                 src={img}
                 alt={title}
                 quality="25"

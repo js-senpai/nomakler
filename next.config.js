@@ -7,15 +7,11 @@ module.exports = withPlugins([
     optimizedImages,
     {
       // optimisation disabled by default, to enable check https://github.com/cyrilwanner/next-optimized-images
-      optimizeImages: false,
+      optimizeImages: true,
     },
   ],
 ],{
   reactStrictMode: true,
   compress: true,
   swcMinify: true,
-  images: {
-    disableStaticImages: true,
-    domains: ['goofy-wilson-872921.netlify.app'],
-  },
 });

@@ -12,6 +12,7 @@ const LinkPrimary = dynamic(() =>
 import { useTranslation } from 'next-export-i18n'
 import {ApartmentsItemProps} from "./ApartmentsItem.props";
 import styles from './ApartmentItem.module.sass'
+import customLoader from "../../../../loaders/customLoader";
 const Badge = dynamic(() =>
     import('../../../atoms/Badge')
 )
@@ -33,7 +34,7 @@ const ApartmentItem = ({
             <div className={styles.apartmentItem__img}>
                 {
                     img ?
-                    <Image
+                    <Image loader={customLoader}
                         src={img}
                         alt={title}
                         quality="50"

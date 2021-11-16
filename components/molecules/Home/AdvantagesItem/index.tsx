@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 const Image = dynamic(()=>import('next/image'))
 import styles from './AdvantagesItem.module.sass'
 import {AdvantagesItemProps} from "./AdvantagesItem.props";
+import customLoader from "../../../../loaders/customLoader";
 const BlockContainer = dynamic(() =>
     import('../../../containers/BlockContainer')
 )
@@ -13,7 +14,7 @@ const AdvantagesItem = ({img = '/images/organisms/Home/Advantages/search.svg',ti
         <BlockContainer {...props} className={styles.advantagesItem}>
             {
                 img.length ? <div className={styles.advantagesItem__img}>
-                    <Image
+                    <Image loader={customLoader}
                         width={69}
                         height={68}
                         src={img}
