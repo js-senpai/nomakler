@@ -7,4 +7,7 @@ module.exports = withPlugins([
   reactStrictMode: true,
   compress: true,
   swcMinify: true,
+  images: {
+    domains: ['goofy-wilson-872921.netlify.app'],
+  },
 });
