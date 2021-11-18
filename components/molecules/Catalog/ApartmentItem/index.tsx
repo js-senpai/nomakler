@@ -34,7 +34,7 @@ const ApartmentItem = ({
             <div className={styles.apartmentItem__img}>
                 {
                     img ?
-                    <Image loader={customLoader}
+                    <Image 
                         src={img}
                         alt={title}
                         quality="50"

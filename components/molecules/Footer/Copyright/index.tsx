@@ -10,7 +10,7 @@ const Copyright = ({className = '',...props}):JSX.Element => {
         <a href="https://michaelstudioo.com/" target="__blank" className={`${styles.copyright}`}>
             <span>{t('OTHER.COPYRIGHT')}</span>
             <div  className={styles.copyright__img}>
-                <Image loader={customLoader}
+                <Image 
                     width={31}
                     height={22}
                     src="/images/molecules/Footer/Copyright/logo.png"

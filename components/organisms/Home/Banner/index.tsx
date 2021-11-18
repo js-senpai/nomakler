@@ -10,7 +10,7 @@ const DefaultContainer = dynamic(() =>
 const Banner = ({img = '/images/organisms/Home/Banner/banner.jpg',title = '',description = '',...props}:BannerProps):JSX.Element => {
     return(
         <section  className={styles.banner}>
-            <Image loader={customLoader}
+            <Image 
                 src={img}
                 alt={title}
                 quality="25"

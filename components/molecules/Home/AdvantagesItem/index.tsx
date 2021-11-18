@@ -14,7 +14,7 @@ const AdvantagesItem = ({img = '/images/organisms/Home/Advantages/search.svg',ti
         <BlockContainer {...props} className={styles.advantagesItem}>
             {
                 img.length ? <div className={styles.advantagesItem__img}>
-                    <Image loader={customLoader}
+                    <Image 
                         width={69}
                         height={68}
                         src={img}

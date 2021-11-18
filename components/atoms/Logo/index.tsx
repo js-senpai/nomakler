@@ -8,7 +8,7 @@ const Logo = ({src = '',className = '',priority = false,...props}:LogoProps):JSX
       <div {...props} className={`${styles.logo} ${className}`}>
           <Link href="/" >
               <a>
-                  {src.length ?<Image loader={customLoader}
+                  {src.length ?<Image 
                       priority={priority}
                       width={200}
                       height={37}
