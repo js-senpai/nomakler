@@ -43,7 +43,7 @@ export const getStaticProps = async () => {
                     src: '/images/atoms/Logo/LogoLight.svg',
                 },
                 homeBanner: {
-                  img: '/images/organisms/Home/Banner/banner.jpg?webp',
+                  img: '/images/organisms/Home/Banner/banner.jpg',
                   title: 'Discover Your New Home',
                   description: 'Helping 100 million renters find their perfect fit.'
                 },

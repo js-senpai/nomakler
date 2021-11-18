@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-const Image = dynamic(()=>import('next/image'))
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import {faBed,faShower,faRulerCombined} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 // Import components
@@ -12,12 +12,11 @@ const LinkPrimary = dynamic(() =>
 import { useTranslation } from 'next-export-i18n'
 import {ApartmentsItemProps} from "./ApartmentsItem.props";
 import styles from './ApartmentItem.module.sass'
-import customLoader from "../../../../loaders/customLoader";
 const Badge = dynamic(() =>
     import('../../../atoms/Badge')
 )
 const ApartmentItem = ({
-                       img = '/images/molecules/Catalog/Apartment/item-1.jpg',
+                       img = '/LazyLoadImages/molecules/Catalog/Apartment/item-1.jpg',
                        verified = true,
                        ready = true,
                        title = '',
@@ -34,11 +33,10 @@ const ApartmentItem = ({
             <div className={styles.apartmentItem__img}>
                 {
                     img ?
-                    <Image 
+                    <LazyLoadImage
                         src={img}
                         alt={title}
-                        quality="50"
-                        layout="fill"
+
                     />: null
                 }
                 {

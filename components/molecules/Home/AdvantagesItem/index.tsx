@@ -1,25 +1,22 @@
 // Import components
 import dynamic from "next/dynamic";
-const Image = dynamic(()=>import('next/image'))
 import styles from './AdvantagesItem.module.sass'
 import {AdvantagesItemProps} from "./AdvantagesItem.props";
-import customLoader from "../../../../loaders/customLoader";
 const BlockContainer = dynamic(() =>
     import('../../../containers/BlockContainer')
 )
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-
-const AdvantagesItem = ({img = '/images/organisms/Home/Advantages/search.svg',title = '',description = '',...props}:AdvantagesItemProps):JSX.Element => {
+const AdvantagesItem = ({img = '/LazyLoadImages/organisms/Home/Advantages/search.svg',title = '',description = '',...props}:AdvantagesItemProps):JSX.Element => {
     return (
         <BlockContainer {...props} className={styles.advantagesItem}>
             {
                 img.length ? <div className={styles.advantagesItem__img}>
-                    <Image 
+                    <LazyLoadImage
                         width={69}
                         height={68}
                         src={img}
                         alt="icon"
-                        quality="60"
                     />
                 </div>: null
             }
